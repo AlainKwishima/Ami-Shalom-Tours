@@ -1,0 +1,27 @@
+{
+  "name": "Tarsier Travel",
+  "short_name": "Tarsier",
+  "description": "Your travel experience with expert guided tours and unforgettable adventures",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#002B28",
+  "theme_color": "#EAB308",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["travel", "lifestyle", "tourism"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

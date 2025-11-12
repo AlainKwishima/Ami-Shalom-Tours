@@ -1,0 +1,12 @@
+export { HeroCarousel } from "./hero-carousel";
+export { AboutSection } from "./about-section";
+export { TravelSection } from "./travel-section";
+export { ReasonsSection } from "./reasons-section";
+export { ExclusiveTourSection } from "./exclusive-tour-section";
+export { BrowseCategorySection } from "./browse-category-section";
+export { TopDestinationsSection } from "./top-destinations-section";
+export { TravelDealsSection } from "./travel-deals-section";
+export { WhyChooseUsSection } from "./why-choose-us-section";
+export { TeamSection } from "./team-section";
+export { ReviewsSection } from "./reviews-section";
+export { FaqSection } from "./faq-section";
