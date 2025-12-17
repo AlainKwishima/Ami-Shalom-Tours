@@ -52,7 +52,7 @@ export function HeroCarousel() {
             className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-wider animate-fade-in-up"
             style={{ fontFamily: "Righteous, cursive" }}
           >
-            Ami Shalom Tours
+            Ami Shalom
           </h1>
 
           {/* Description */}
