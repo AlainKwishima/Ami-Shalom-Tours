@@ -12,7 +12,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   return (
     <div className="md:hidden">
-      <div className="fixed inset-0 z-50 px-4 pt-6 pb-4 space-y-4 sm:px-6 h-[100vh] w-[100vw] bg-black/70 backdrop-blur-md">
+      <div className="fixed inset-0 z-50 px-4 pt-6 pb-4 space-y-4 sm:px-6 h-screen w-screen bg-black/70 backdrop-blur-md">
         <NavLinks
           className="flex-col space-x-0 space-y-6 text-lg"
           onItemClick={onClose}

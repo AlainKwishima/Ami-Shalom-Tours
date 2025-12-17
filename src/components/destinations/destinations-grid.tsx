@@ -1,25 +1,37 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Pagination } from "@/components/ui/pagination";
-import { getAllDestinations } from "@/lib/destinations-data";
-
-const destinations = getAllDestinations();
+import { API_BASE_URL } from "@/lib/constants";
+import type { PaginatedDestinations } from "@/lib/api/destinations";
 
 const ITEMS_PER_PAGE = 6;
 
 export function DestinationsGrid() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [items, setItems] = useState<PaginatedDestinations["data"]>([]);
+  const [totalPages, setTotalPages] = useState(1);
 
-  const totalPages = Math.ceil(destinations.length / ITEMS_PER_PAGE);
-
-  const paginatedDestinations = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return destinations.slice(startIndex, endIndex);
+  useEffect(() => {
+    let active = true;
+    fetch(`${API_BASE_URL}/destinations?page=${currentPage}&limit=${ITEMS_PER_PAGE}`, {
+      cache: "no-store",
+    })
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error("Failed to load destinations"))))
+      .then((data: PaginatedDestinations) => {
+        if (!active) return;
+        setItems(data.data ?? []);
+        setTotalPages(data.pagination?.totalPages ?? 1);
+      })
+      .catch(() => {
+        setItems([]);
+      });
+    return () => {
+      active = false;
+    };
   }, [currentPage]);
 
   const handlePageChange = (page: number) => {
@@ -52,22 +64,22 @@ export function DestinationsGrid() {
 
         {/* Destinations Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {paginatedDestinations.map((destination) => (
+          {items.map((destination) => (
             <div
-              key={destination.id}
+              key={destination._id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               {/* Image */}
               <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
                 <Image
-                  src={destination.image}
+                  src={destination.images?.[0] ?? destination.gallery?.[0] ?? "/assets/city1.jpg"}
                   alt={destination.title}
                   fill
                   className="object-cover"
                 />
                 {/* Rating Badge */}
                 <div className="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
-                  ★ {destination.rating}
+                  ★ {destination.rating ?? 5}
                 </div>
               </div>
 
@@ -106,7 +118,7 @@ export function DestinationsGrid() {
                   asChild
                   className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded-lg transition-colors duration-200"
                 >
-                  <Link href={`/destinations/${destination.id}`}>View Details</Link>
+                  <Link href={`/destinations/${destination._id}`}>View Details</Link>
                 </Button>
               </div>
             </div>

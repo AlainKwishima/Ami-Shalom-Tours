@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import {
@@ -11,35 +12,37 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { API_BASE_URL } from "@/lib/constants";
 
 interface Review {
-  id: number;
+  id: string;
   text: string;
   rating: number;
   author: string;
 }
 
-const reviews: Review[] = [
+const defaultReviews: Review[] = [
   {
-    id: 1,
+    id: "1",
     text: '"Absolutely Wonderful! Just The Right Amount Of Time Spent Snorkeling And One Of The Most Beautiful Beaches I Have Ever Seen. Customer Service Was Professional. Highly Recommend."',
     rating: 5,
     author: "JOHN DOE",
   },
   {
-    id: 2,
+    id: "2",
     text: '"An amazing experience from start to finish! Our tour guide was knowledgeable and friendly. The destinations were breathtaking and well-organized. Would definitely book again!"',
     rating: 5,
     author: "SARAH SMITH",
   },
   {
-    id: 3,
+    id: "3",
     text: '"Best vacation ever! Everything was perfectly planned and executed. The accommodations were excellent and the itinerary was well-balanced. Highly recommend this tour company!"',
     rating: 5,
     author: "MICHAEL JOHNSON",
   },
   {
-    id: 4,
+    id: "4",
     text: '"Exceptional service and unforgettable memories! The attention to detail and personalized touches made this trip truly special. Cannot wait to book our next adventure!"',
     rating: 5,
     author: "EMILY DAVIS",
@@ -49,6 +52,7 @@ const reviews: Review[] = [
 export function ReviewsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [reviews, setReviews] = useState<Review[]>(defaultReviews);
 
   useEffect(() => {
     if (!api) {
@@ -74,6 +78,42 @@ export function ReviewsSection() {
 
     return () => clearInterval(interval);
   }, [api]);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch(`${API_BASE_URL}/reviews?limit=10`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load reviews");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (!isMounted) return;
+        if (Array.isArray(data?.data) && data.data.length) {
+          const mapped: Review[] = data.data.map(
+            (item: { id?: string; _id?: string; message: string; rating: number; name: string }) => ({
+              id:
+                item.id ??
+                item._id ??
+                (typeof crypto !== "undefined" && crypto.randomUUID
+                  ? crypto.randomUUID()
+                  : Math.random().toString(36).slice(2)),
+              text: item.message,
+              rating: item.rating ?? 5,
+              author: item.name?.toUpperCase?.() ?? item.name ?? "Traveller",
+            }),
+          );
+          setReviews(mapped);
+        }
+      })
+      .catch(() => {
+        // keep defaults on failure
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <section
@@ -171,6 +211,17 @@ export function ReviewsSection() {
             </Carousel>
           </div>
         </div>
+      </div>
+
+      <div className="mt-12 flex justify-center">
+        <Button
+          asChild
+          size="lg"
+          variant="secondary"
+          className="bg-yellow-400 text-slate-900 hover:bg-yellow-300"
+        >
+          <Link href="/write-review">Write a Review</Link>
+        </Button>
       </div>
     </section>
   );

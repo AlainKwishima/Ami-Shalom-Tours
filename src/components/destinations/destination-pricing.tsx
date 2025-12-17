@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationPricingProps {
   destination: Destination;
@@ -29,9 +29,9 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
               What&apos;s Included
             </h2>
             <div className="space-y-3">
-              {destination.included.map((item, index) => (
+              {(destination.included ?? []).map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <Check className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                   <span className="text-white">{item}</span>
                 </div>
               ))}
@@ -52,9 +52,9 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
               What&apos;s Not Included
             </h2>
             <div className="space-y-3">
-              {destination.notIncluded.map((item, index) => (
+              {(destination.notIncluded ?? []).map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                  <X className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
                   <span className="text-white/80">{item}</span>
                 </div>
               ))}

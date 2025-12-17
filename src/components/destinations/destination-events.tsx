@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationEventsProps {
   destination: Destination;

@@ -47,8 +47,8 @@ export function ContactInfo() {
             </div>
             <div>
               <h4 className="font-semibold text-gray-900 mb-1">Email Address</h4>
-              <p className="text-gray-600">info@tarsiertravel.com</p>
-              <p className="text-gray-600">bookings@tarsiertravel.com</p>
+              <p className="text-gray-600">info@AmiShalom.com</p>
+              <p className="text-gray-600">bookings@AmiShalom.com</p>
             </div>
           </div>
 

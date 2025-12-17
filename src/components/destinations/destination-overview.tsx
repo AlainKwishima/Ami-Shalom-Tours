@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle, Calendar, Mountain, Users as UsersIcon } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationOverviewProps {
   destination: Destination;
@@ -40,9 +40,9 @@ export function DestinationOverview({ destination }: DestinationOverviewProps) {
                   Highlights
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {destination.highlights.map((highlight, index) => (
+                  {(destination.highlights ?? []).map((highlight, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                       <span className="text-gray-700">{highlight}</span>
                     </div>
                   ))}
@@ -68,21 +68,21 @@ export function DestinationOverview({ destination }: DestinationOverviewProps) {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Calendar className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <Calendar className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-600">Best Time</p>
                     <p className="text-gray-900 font-medium">{destination.bestTime}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mountain className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <Mountain className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-600">Difficulty</p>
                     <p className="text-gray-900 font-medium">{destination.difficulty}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <UsersIcon className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <UsersIcon className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-600">Group Size</p>
                     <p className="text-gray-900 font-medium">{destination.groupSize}</p>

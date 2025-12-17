@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationGalleryProps {
   destination: Destination;
@@ -22,7 +22,7 @@ export function DestinationGallery({ destination }: DestinationGalleryProps) {
           Photo Gallery
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {destination.gallery.map((image, index) => (
+          {(destination.gallery ?? []).map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedImage(image)}

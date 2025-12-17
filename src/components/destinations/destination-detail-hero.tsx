@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, Clock, Star, Users } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationDetailHeroProps {
   destination: Destination;
@@ -14,14 +14,14 @@ export function DestinationDetailHero({ destination }: DestinationDetailHeroProp
       {/* Hero Image */}
       <div className="relative w-full h-full">
         <Image
-          src={destination.image}
+          src={destination.images?.[0] ?? destination.gallery?.[0] ?? "/assets/city1.jpg"}
           alt={destination.title}
           fill
           className="object-cover"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/20" />
       </div>
 
       {/* Content */}
@@ -50,7 +50,7 @@ export function DestinationDetailHero({ destination }: DestinationDetailHeroProp
               </div>
               <div className="flex items-center gap-2">
                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
-                <span className="text-lg font-semibold">{destination.rating}</span>
+                <span className="text-lg font-semibold">{destination.rating ?? 5}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-yellow-500" />

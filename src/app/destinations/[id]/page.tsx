@@ -11,7 +11,8 @@ import {
   DestinationEvents,
   DestinationReviews,
 } from "@/components/destinations";
-import { getDestinationById } from "@/lib/destinations-data";
+import { API_BASE_URL } from "@/lib/constants";
+import type { Destination } from "@/lib/api/destinations";
 
 interface DestinationDetailPageProps {
   params: Promise<{ id: string }>;
@@ -19,7 +20,8 @@ interface DestinationDetailPageProps {
 
 export async function generateMetadata({ params }: DestinationDetailPageProps) {
   const { id } = await params;
-  const destination = getDestinationById(parseInt(id));
+  const res = await fetch(`${API_BASE_URL}/destinations/${id}`, { cache: "no-store" });
+  const destination = res.ok ? ((await res.json()) as Destination) : null;
 
   if (!destination) {
     return {
@@ -35,7 +37,8 @@ export async function generateMetadata({ params }: DestinationDetailPageProps) {
 
 export default async function DestinationDetailPage({ params }: DestinationDetailPageProps) {
   const { id } = await params;
-  const destination = getDestinationById(parseInt(id));
+  const res = await fetch(`${API_BASE_URL}/destinations/${id}`, { cache: "no-store" });
+  const destination = res.ok ? ((await res.json()) as Destination) : null;
 
   if (!destination) {
     notFound();

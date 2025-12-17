@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationItineraryProps {
   destination: Destination;
@@ -19,7 +19,7 @@ export function DestinationItinerary({ destination }: DestinationItineraryProps)
           Itinerary
         </h2>
         <div className="space-y-8">
-          {destination.itinerary.map((day, index) => (
+          {(destination.itinerary ?? []).map((day, index) => (
             <motion.div
               key={day.day}
               initial={{ opacity: 0, x: -20 }}
@@ -29,7 +29,7 @@ export function DestinationItinerary({ destination }: DestinationItineraryProps)
               className="flex flex-col md:flex-row gap-6"
             >
               {/* Day Number */}
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-500 rounded-full flex items-center justify-center">
                   <span className="text-2xl md:text-3xl font-bold text-black" style={{ fontFamily: "Palanquin Dark, sans-serif" }}>
                     {day.day}

@@ -2,14 +2,16 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { Destination } from "@/lib/destinations-data";
+import { Destination } from "@/lib/api/destinations";
 
 interface DestinationReviewsProps {
   destination: Destination;
 }
 
+type ReviewItem = { id: string; name: string; rating: number; message: string };
+
 export function DestinationReviews({ destination }: DestinationReviewsProps) {
-  if (!destination.reviews || destination.reviews.length === 0) {
+  if (!Array.isArray(destination.highlights) || destination.highlights.length === 0) {
     return null;
   }
 
@@ -23,9 +25,9 @@ export function DestinationReviews({ destination }: DestinationReviewsProps) {
           Traveler Reviews
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {destination.reviews.map((review, index) => (
+          {destination.highlights.slice(0, 4).map((text, index) => (
             <motion.div
-              key={review.id}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -33,17 +35,17 @@ export function DestinationReviews({ destination }: DestinationReviewsProps) {
               className="bg-gray-50 rounded-2xl p-6 md:p-8"
             >
               <div className="flex items-center gap-2 mb-4">
-                {[...Array(review.rating)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
                 ))}
               </div>
               <p className="text-gray-700 leading-relaxed mb-4 italic">
-                &quot;{review.comment}&quot;
+                &quot;{text}&quot;
               </p>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="font-semibold text-gray-900">{review.author}</p>
-                  <p className="text-sm text-gray-600">{new Date(review.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  <p className="font-semibold text-gray-900">Traveller</p>
+                  <p className="text-sm text-gray-600">Recent review</p>
                 </div>
               </div>
             </motion.div>

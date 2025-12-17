@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -24,6 +25,8 @@ export function HeroCarousel() {
         loop
         muted
         playsInline
+        preload="auto"
+        poster="/assets/hero.svg"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/assets/Beauty is Africa.mp4" type="video/mp4" />
@@ -49,7 +52,7 @@ export function HeroCarousel() {
             className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-wider animate-fade-in-up"
             style={{ fontFamily: "Righteous, cursive" }}
           >
-            Ami Shalom
+            Ami Shalom Tours
           </h1>
 
           {/* Description */}
@@ -59,10 +62,11 @@ export function HeroCarousel() {
 
           {/* CTA Button */}
           <Button
+            asChild
             size="lg"
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3 text-lg rounded-lg transition-all duration-300 hover:scale-105 animate-fade-in-delay-2"
           >
-            Book A Tour
+            <Link href="/book-tour">Book A Tour</Link>
           </Button>
         </div>
       </div>
