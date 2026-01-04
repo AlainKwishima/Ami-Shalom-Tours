@@ -41,6 +41,41 @@ const images: GalleryImage[] = [
   { id: 18, src: "/assets/re3.jpg", alt: "Mountain lake", category: "Nature", title: "Mountain Lake", location: "Canada", date: "June 2024", description: "Crystal clear mountain lake", destinationId: 3 },
   { id: 19, src: "/assets/re4.jpg", alt: "Cultural festival", category: "Culture", title: "Cultural Festival", location: "India", date: "July 2024", description: "Vibrant cultural celebration", destinationId: 2 },
   { id: 20, src: "/assets/re5.jpg", alt: "Desert oasis", category: "Deserts", title: "Desert Oasis", location: "Morocco", date: "August 2024", description: "Peaceful desert oasis", destinationId: 5 },
+  { id: 21, src: "/assets/Whatsapp/IMG-20251213-WA0001.jpg", alt: "Giraffe in Akagera", category: "Wildlife", title: "Graceful Giraffe", location: "Akagera NP, Rwanda", description: "A majestic giraffe wandering through the savanna of Akagera." },
+  { id: 22, src: "/assets/Whatsapp/IMG-20251213-WA0002.jpg", alt: "Impala grazing", category: "Wildlife", title: "Impala at Peace", location: "Akagera NP, Rwanda", description: "An impala grazing peacefully in the lush greenery of the park." },
+  { id: 23, src: "/assets/Whatsapp/IMG-20251213-WA0003.jpg", alt: "Crocodile by the water", category: "Wildlife", title: "The Hidden Predator", location: "Akagera NP, Rwanda", description: "A crocodile stealthily resting by the water's edge." },
+  { id: 24, src: "/assets/Whatsapp/IMG-20251213-WA0004.jpg", alt: "Baboons grooming", category: "Wildlife", title: "Social Interaction", location: "Akagera NP, Rwanda", description: "Baboons engaged in their daily grooming rituals." },
+  { id: 25, src: "/assets/Whatsapp/IMG-20251213-WA0005.jpg", alt: "African Fish Eagle", category: "Wildlife", title: "The Eagle's Watch", location: "Akagera NP, Rwanda", description: "An African Fish Eagle perched high, surveying the landscape." },
+  { id: 26, src: "/assets/Whatsapp/IMG-20251213-WA0006.jpg", alt: "Baboon in bushes", category: "Wildlife", title: "Curious Baboon", location: "Akagera NP, Rwanda", description: "A baboon peeking through the dense park vegetation." },
+  { id: 27, src: "/assets/Whatsapp/IMG-20251213-WA0007.jpg", alt: "Topis in savanna", category: "Wildlife", title: "Topis on the Move", location: "Akagera NP, Rwanda", description: "A group of topis standing guard in the open savanna." },
+  { id: 28, src: "/assets/Whatsapp/IMG-20251213-WA0008.jpg", alt: "Giraffe in trees", category: "Wildlife", title: "Tall Resident", location: "Akagera NP, Rwanda", description: "A giraffe foraging among the acacia trees." },
+  { id: 29, src: "/assets/Whatsapp/IMG-20251213-WA0009.jpg", alt: "Topi and Warthog", category: "Wildlife", title: "Uneasy Neighbors", location: "Akagera NP, Rwanda", description: "A topi and a warthog sharing a moment in the park." },
+  { id: 30, src: "/assets/Whatsapp/IMG-20251213-WA0010.jpg", alt: "Akagera Park Sign", category: "Wildlife", title: "Welcome to Akagera", location: "Akagera NP, Rwanda", description: "The iconic entrance sign to Rwanda's premier savanna park." },
+  { id: 31, src: "/assets/Whatsapp/IMG-20251213-WA0011.jpg", alt: "Buffalo in grass", category: "Wildlife", title: "Cape Buffalo", location: "Akagera NP, Rwanda", description: "A powerful Cape Buffalo camouflaged in the high grass." },
+  { id: 32, src: "/assets/Whatsapp/IMG-20251213-WA0012.jpg", alt: "Crocodile resting", category: "Wildlife", title: "Sunbathing", location: "Akagera NP, Rwanda", description: "Large crocodile basking in the sun near Lake Ihema." },
+  { id: 33, src: "/assets/Whatsapp/IMG-20251213-WA0013.jpg", alt: "Small antelope", category: "Wildlife", title: "Savanna Hider", location: "Akagera NP, Rwanda", description: "A small antelope resting safely within the tall grass." },
+  { id: 34, src: "/assets/Whatsapp/IMG-20251213-WA0014.jpg", alt: "Savanna landscape", category: "Wildlife", title: "Open Savanna", location: "Akagera NP, Rwanda", description: "Panoramic view of the rolling hills and lakes of Akagera." },
+  { id: 35, src: "/assets/Whatsapp/IMG-20251213-WA0015.jpg", alt: "Zebras", category: "Wildlife", title: "Zebra Herd", location: "Akagera NP, Rwanda", description: "A group of zebras creating a stunning pattern with their stripes." },
+  { id: 36, src: "/assets/Whatsapp/IMG-20251213-WA0016.jpg", alt: "Landscape with birds", category: "Wildlife", title: "Wetland Life", location: "Akagera NP, Rwanda", description: "Birds gathered in the wetland areas of the national park." },
+  { id: 37, src: "/assets/Whatsapp/IMG-20251213-WA0017.jpg", alt: "Buffalo herd", category: "Wildlife", title: "Buffalo Gathering", location: "Akagera NP, Rwanda", description: "A large group of buffalo moving through the park." },
+  { id: 38, src: "/assets/Whatsapp/IMG-20251213-WA0018.jpg", alt: "Elephants", category: "Wildlife", title: "Gentle Giants", location: "Akagera NP, Rwanda", description: "Elephant herd spotted during a safari drive." },
+  { id: 39, src: "/assets/Whatsapp/IMG-20251213-WA0019.jpg", alt: "Heron in water", category: "Wildlife", title: "The Fisher", location: "Akagera NP, Rwanda", description: "A heron waiting patiently for its next meal." },
+  { id: 40, src: "/assets/Whatsapp/IMG-20251213-WA0020.jpg", alt: "Bird in wetlands", category: "Wildlife", title: "Avian Paradise", location: "Akagera NP, Rwanda", description: "Detailed view of a water bird in the Akagera swamps." },
+  { id: 41, src: "/assets/Whatsapp/IMG-20251213-WA0021.jpg", alt: "Small bird", category: "Wildlife", title: "Colorful Resident", location: "Akagera NP, Rwanda", description: "One of the many vibrant bird species found in the park." },
+  { id: 42, src: "/assets/Whatsapp/IMG-20251213-WA0022.jpg", alt: "Baboon troop", category: "Wildlife", title: "On the Road", location: "Akagera NP, Rwanda", description: "Baboons often frequent the safari tracks." },
+  { id: 43, src: "/assets/Whatsapp/IMG-20251213-WA0023.jpg", alt: "Impala running", category: "Wildlife", title: "Agility", location: "Akagera NP, Rwanda", description: "Impala showing their incredible speed and jumping ability." },
+  { id: 44, src: "/assets/Whatsapp/IMG-20251213-WA0024.jpg", alt: "Buffalo close-up", category: "Wildlife", title: "The Stare", location: "Akagera NP, Rwanda", description: "Intense gaze of a Cape Buffalo." },
+  { id: 45, src: "/assets/Whatsapp/IMG-20251213-WA0025.jpg", alt: "Topis", category: "Wildlife", title: "Topi Herd", location: "Akagera NP, Rwanda", description: "Topis gathered together on a sunny day." },
+  { id: 46, src: "/assets/Whatsapp/IMG-20251213-WA0026.jpg", alt: "Savanna sunset", category: "Wildlife", title: "Golden Hour", location: "Akagera NP, Rwanda", description: "Stunning sunset over the African savanna." },
+  { id: 47, src: "/assets/Whatsapp/IMG-20251213-WA0027.jpg", alt: "Zebra portrait", category: "Wildlife", title: "Striped Beauty", location: "Akagera NP, Rwanda", description: "Up close with a single zebra." },
+  { id: 48, src: "/assets/Whatsapp/IMG-20251213-WA0028.jpg", alt: "Giraffe neck", category: "Wildlife", title: "High Reaching", location: "Akagera NP, Rwanda", description: "Giraffe reaching for high leaves." },
+  { id: 49, src: "/assets/Whatsapp/IMG-20251213-WA0029.jpg", alt: "Park entry", category: "Wildlife", title: "Arrival", location: "Akagera NP, Rwanda", description: "Entering the gates of wildlife adventure." },
+  { id: 50, src: "/assets/Whatsapp/IMG-20251213-WA0030.jpg", alt: "Heron", category: "Wildlife", title: "Stately Bird", location: "Akagera NP, Rwanda", description: "A heron perched among the reeds." },
+  { id: 51, src: "/assets/Whatsapp/IMG-20251213-WA0031.jpg", alt: "Park hills", category: "Wildlife", title: "Scenic Hills", location: "Akagera NP, Rwanda", description: "The beautiful topography of Eastern Rwanda." },
+  { id: 52, src: "/assets/Whatsapp/IMG-20251213-WA0032.jpg", alt: "Bird perched", category: "Wildlife", title: "Resting", location: "Akagera NP, Rwanda", description: "Capturing a bird mid-rest." },
+  { id: 53, src: "/assets/Whatsapp/IMG-20251213-WA0033.jpg", alt: "Bushbuck", category: "Wildlife", title: "Bushbuck", location: "Akagera NP, Rwanda", description: "Spotting a shy bushbuck in the thicket." },
+  { id: 54, src: "/assets/Whatsapp/IMG-20251213-WA0034.jpg", alt: "Warthogs", category: "Wildlife", title: "Warthog Family", location: "Akagera NP, Rwanda", description: "Family of warthogs roaming the savanna." },
+  { id: 55, src: "/assets/Whatsapp/IMG-20251213-WA0035.jpg", alt: "Topi lookout", category: "Wildlife", title: "Savanna Sentinel", location: "Akagera NP, Rwanda", description: "A topi standing on a mound to watch for predators." },
 ];
 
 const ITEMS_PER_PAGE = 12;
@@ -50,11 +85,11 @@ export function GalleryGrid() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const categories = ["All", "Beaches", "Mountains", "Cities", "Deserts", "Nature", "Culture"];
+  const categories = ["All", "Beaches", "Mountains", "Cities", "Deserts", "Nature", "Culture", "Wildlife"];
 
   const filtered = useMemo(() => {
-    return selectedCategory === "All" 
-      ? images 
+    return selectedCategory === "All"
+      ? images
       : images.filter(i => i.category === selectedCategory);
   }, [selectedCategory]);
 
