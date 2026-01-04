@@ -16,7 +16,7 @@ export function Footer() {
   return (
     <footer className="relative mt-auto">
       {/* Fade Overlay - Gradient from dark teal to transparent */}
-      <div 
+      <div
         className="absolute top-0 left-0 right-0 h-32 z-10 pointer-events-none"
         style={{
           background: 'linear-gradient(to bottom, #002B28 0%, transparent 100%)'
@@ -70,9 +70,8 @@ export function Footer() {
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className={`text-white hover:text-yellow-500 transition-colors duration-200 ${
-                        link.name === "Home" ? "text-yellow-500" : ""
-                      }`}
+                      className={`text-white hover:text-yellow-500 transition-colors duration-200 ${link.name === "Home" ? "text-yellow-500" : ""
+                        }`}
                       style={{ fontFamily: "Palanquin Dark, sans-serif" }}
                     >
                       {link.name}
@@ -87,18 +86,18 @@ export function Footer() {
               {/* Phone */}
               <div className="flex items-center">
                 <span className="mr-2">Phone:</span>
-                <a 
-                  href="tel:+11234567890" 
+                <a
+                  href="tel:+250780000000"
                   className="hover:text-yellow-500 transition-colors duration-200"
                 >
-                  ++123-456-7890
+                  +250 780 000 000
                 </a>
               </div>
 
               {/* Social Media Icons */}
               <div className="flex items-center gap-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/amishalomtours"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/20 hover:bg-yellow-500 p-2 rounded-full transition-all duration-300 hover:scale-110"
@@ -107,7 +106,7 @@ export function Footer() {
                   <Instagram className="h-5 w-5 text-white" />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/amishalomtours"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/20 hover:bg-yellow-500 p-2 rounded-full transition-all duration-300 hover:scale-110"
@@ -116,7 +115,7 @@ export function Footer() {
                   <Facebook className="h-5 w-5 text-white" />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://twitter.com/amishalomtours"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white/20 hover:bg-yellow-500 p-2 rounded-full transition-all duration-300 hover:scale-110"
@@ -135,11 +134,11 @@ export function Footer() {
               {/* Email */}
               <div className="flex items-center">
                 <span className="mr-2">Email:</span>
-                <a 
-                  href="mailto:info@FLYFLYagency.com" 
+                <a
+                  href="mailto:info@amishalomtours.com"
                   className="hover:text-yellow-500 transition-colors duration-200"
                 >
-                  info@FLYFLYagency.com
+                  info@amishalomtours.com
                 </a>
               </div>
             </div>

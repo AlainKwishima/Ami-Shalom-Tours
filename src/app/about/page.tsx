@@ -12,7 +12,7 @@ import {
 
 export const metadata = {
   title: "About Us",
-  description: "Learn about Ami Shalom Tours - our mission, vision, values, team, and commitment to creating unforgettable travel experiences in Uganda and East Africa.",
+  description: "Learn about Ami Shalom Tours - our mission, vision, values, team, and commitment to creating unforgettable travel experiences in Rwanda and East Africa.",
 };
 
 export default function AboutPage() {

@@ -10,33 +10,33 @@ import {
 const faqs = [
   {
     id: "item-1",
-    question: "How Do I Place An Order?",
+    question: "How do I book a gorilla trekking permit?",
     answer:
-      "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam.",
+      "Gorilla permits are in high demand and should be booked several months in advance. As your tour operator, Ami Shalom handles the entire permit acquisition process through the Rwanda Development Board (RDB). The current price is $1,500 per person, which contributes directly to the conservation of these endangered primates and community development.",
   },
   {
     id: "item-2",
-    question: "What Payment Methods Do You Accept?",
+    question: "What is the best time to visit Rwanda?",
     answer:
-      "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and digital wallets. All transactions are processed through secure payment gateways to ensure your information is protected.",
+      "Rwanda can be visited year-round. However, the dry seasons (June to September and December to February) are ideal for gorilla trekking as the trails are less muddy. The rainy seasons (March to May and October to November) are excellent for chimpanzee tracking in Nyungwe and for photographers who enjoy the lush, vibrant green landscapes.",
   },
   {
     id: "item-3",
-    question: "What Is Your Cancellation Policy?",
+    question: "Do I need a visa to enter Rwanda?",
     answer:
-      "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam.",
+      "Rwanda has a very friendly visa policy. Citizens of all countries can get a 30-day visa upon arrival at Kigali International Airport or any land border. Citizens of many countries, including all African Union, Commonwealth, and Francophonie members, are eligible for visa-free entry or waived fees. We recommend checking the latest Irembo portal updates before travel.",
   },
   {
     id: "item-4",
-    question: "How Do I Contact Customer Support?",
+    question: "What should I pack for a Rwandan safari?",
     answer:
-      "You can reach our customer support team 24/7 through multiple channels: email us at support@travel.com, call our hotline at +(45) 899 566 389, or use our live chat feature on the website. We typically respond within 2 hours.",
+      "For gorilla trekking, pack sturdy hiking boots, long trousers, long-sleeved shirts, and garden gloves to protect against nettles. Don't forget a waterproof jacket, even in the dry season. For Akagera safaris, lightweight neutral-colored clothing is best. Rwanda is plastic-bag free, so please use reusable bags for your belongings.",
   },
   {
     id: "item-5",
-    question: "What Is Your Privacy Policy?",
+    question: "Is Rwanda safe for solo travelers and families?",
     answer:
-      "We take your privacy seriously and comply with all data protection regulations. Your personal information is encrypted, securely stored, and never shared with third parties without your consent. You can read our full privacy policy on our website.",
+      "Absolutely. Rwanda is consistently ranked as one of the safest countries globally. Kigali is exceptionally peaceful, and the hospitality of the Rwandan people is legendary. Whether you are a solo traveler or visiting with family, you will find a secure environment, professional guides, and a culture that deeply respects and welcomes guests.",
   },
 ];
 

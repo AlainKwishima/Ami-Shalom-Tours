@@ -28,27 +28,27 @@ export function ExtendedTeam() {
 
   const featuredTeam = [
     {
-      name: "ARTEMIY LEVONOV",
-      role: "CHIEF INSTRUCTOR",
-      title: "TOUR GUIDE",
+      name: "Jean Paul Habimana",
+      role: "Lead Guide",
+      title: "Senior Tour Guide",
       image: "/assets/team1.jpg",
     },
     {
-      name: "EVELINE MORTAK",
-      role: "INSTRUCTOR",
-      title: "TOUR GUIDE",
+      name: "Divine Mutoni",
+      role: "Operations Manager",
+      title: "Logistics Expert",
       image: "/assets/team2.jpg",
     },
     {
-      name: "ALEKSANDRA VISOTSKA",
-      role: "TOUR GUIDE",
-      title: "",
+      name: "Eric Gasana",
+      role: "Tour Specialist",
+      title: "Cultural Expert",
       image: "/assets/team3.jpg",
     },
     {
-      name: "JAYSON MANYER",
-      role: "TOUR GUIDE",
-      title: "DRIVER",
+      name: "Sandrine Uwase",
+      role: "Travel Consultant",
+      title: "Customer Success",
       image: "/assets/team4.jpg",
     },
   ];
@@ -76,7 +76,7 @@ export function ExtendedTeam() {
             OUR EXTENDED TEAM
           </h2>
           <p className="text-white text-lg mt-4 max-w-3xl mx-auto">
-            Our success is built on the dedication and expertise of our incredible team members 
+            Our success is built on the dedication and expertise of our incredible team members
             who work together to create unforgettable experiences for every traveler.
           </p>
         </motion.div>

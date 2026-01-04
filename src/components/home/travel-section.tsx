@@ -15,7 +15,7 @@ export function TravelSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-1 text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,7 +72,7 @@ export function TravelSection() {
           </motion.div>
 
           {/* Center Image */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-1 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -93,7 +93,7 @@ export function TravelSection() {
           </motion.div>
 
           {/* Right Content */}
-          <motion.div 
+          <motion.div
             className="lg:col-span-1 text-left lg:text-right"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,41 +108,39 @@ export function TravelSection() {
             </p>
 
             <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed mb-8">
-              We Believe That A Vacation Should Be More Than A Hotel Room, A
-              Flight And A Rental Car. It Should Be More Than The Sum Of Its
-              Parts.
+              We believe that a journey through Rwanda should be more than just a destination; it should be an emotional connection. From the mist of the mountain forests to the warmth of a Thousand Hills, we craft memories that linger for a lifetime.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="text-center lg:text-right">
                 <h3 className="text-yellow-500 text-3xl md:text-4xl font-bold">
-                  10
+                  8
                 </h3>
                 <p className="text-white text-xs md:text-sm">
                   Years Of
                   <br />
-                  Experience
+                  Expertise
                 </p>
               </div>
               <div className="text-center">
                 <h3 className="text-yellow-500 text-3xl md:text-4xl font-bold">
-                  2000
+                  1500+
                 </h3>
                 <p className="text-white text-xs md:text-sm">
                   Satisfied
                   <br />
-                  Clients
+                  Travelers
                 </p>
               </div>
               <div className="text-center lg:text-left">
                 <h3 className="text-yellow-500 text-3xl md:text-4xl font-bold">
-                  100
+                  5
                 </h3>
                 <p className="text-white text-xs md:text-sm">
-                  Countries
+                  National
                   <br />
-                  Covered
+                  Parks
                 </p>
               </div>
             </div>

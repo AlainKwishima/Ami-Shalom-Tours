@@ -6,10 +6,10 @@ import { MapPin, Users, Award, Globe } from "lucide-react";
 
 export function CompanyOverview() {
   const stats = [
-    { icon: Globe, label: "Countries", value: "Uganda & Beyond", description: "Operating across East Africa" },
-    { icon: Users, label: "Team Members", value: "20+", description: "Expert guides and staff" },
-    { icon: Award, label: "Years Experience", value: "10+", description: "Creating memorable journeys" },
-    { icon: MapPin, label: "Destinations", value: "50+", description: "Curated locations" },
+    { icon: Globe, label: "Destinations", value: "Rwanda & Beyond", description: "Heart of East Africa" },
+    { icon: Users, label: "Team Members", value: "15+", description: "Expert local guides" },
+    { icon: Award, label: "Years Experience", value: "8+", description: "Touring the thousand hills" },
+    { icon: MapPin, label: "Safe Safaris", value: "100%", description: "Guaranteed security" },
   ];
 
   return (
@@ -31,22 +31,22 @@ export function CompanyOverview() {
             </h2>
             <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
               <p>
-                Ami Shalom Company LTD is a premier tourism operator specializing in curated, 
-                immersive travel experiences across Uganda. From tracking the majestic mountain 
-                gorillas of Bwindi, to gliding across serene lakes on boat cruises, to standing 
-                in awe beneath thundering waterfalls, we deliver journeys that go beyond 
+                Ami Shalom Company LTD is a premier tourism operator specializing in curated,
+                immersive travel experiences across Rwanda. From tracking the majestic mountain
+                gorillas of Volcanoes National Park, to gliding across serene Lake Kivu on boat cruises,
+                to standing in awe before the Big Five in Akagera, we deliver journeys that go beyond
                 sightseeing — offering moments that inspire, educate, and connect.
               </p>
               <p>
-                Based in Uganda, we have been serving travelers from around the world for over 
-                a decade, building a reputation for excellence, authenticity, and unforgettable 
-                adventures. Our deep local knowledge, combined with international standards of 
+                Based in the heart of Kigali, we have been serving travelers from around the world,
+                building a reputation for excellence, authenticity, and peace-centered adventures.
+                Our deep local knowledge of the thousand hills, combined with international standards of
                 service, ensures every journey is both safe and extraordinary.
               </p>
               <p>
-                We operate throughout Uganda and extend our services to neighboring countries 
-                in East Africa, offering comprehensive travel solutions that showcase the best 
-                of the region&apos;s natural beauty, wildlife, and cultural heritage.
+                We operate throughout Rwanda and collaborate with partners in neighboring countries
+                to offer comprehensive travel solutions that showcase the best of the region&apos;s
+                natural beauty, wildlife, and cultural heritage, always centered on the Rwandan spirit of hospitality.
               </p>
             </div>
           </motion.div>
@@ -62,7 +62,7 @@ export function CompanyOverview() {
             <div className="relative h-64 rounded-2xl overflow-hidden border-2 border-yellow-500 shadow-xl">
               <Image
                 src="/assets/about1.svg"
-                alt="Uganda landscape"
+                alt="Rwandan landscape"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 400px"

@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,15 +7,15 @@ import { Calendar, MapPin, Users } from "lucide-react";
 export function OurStory() {
   const milestones = [
     {
-      year: "2014",
+      year: "2016",
       title: "The Beginning",
-      description: "Ami Shalom Tours was founded with a vision to share the beauty of Uganda with the world. Starting with small group tours, we focused on authentic experiences and personal connections.",
+      description: "Ami Shalom Tours was founded in Kigali with a vision to share the 'Land of a Thousand Hills' with the world. We started by showcasing Rwanda's breathtaking landscapes and resilient spirit.",
       icon: Calendar,
     },
     {
-      year: "2017",
-      title: "Expansion",
-      description: "We expanded our operations across Uganda, adding gorilla trekking, wildlife safaris, and cultural tours to our portfolio. Our team grew to include expert local guides.",
+      year: "2019",
+      title: "Conservation Focus",
+      description: "We deepened our commitment to conservation, partnering with Volcanoes National Park for sustainable gorilla trekking experiences that benefit both wildlife and local communities.",
       icon: MapPin,
     },
     {
@@ -66,28 +66,27 @@ export function OurStory() {
             className="space-y-6 text-gray-700 text-lg leading-relaxed"
           >
             <p>
-              Ami Shalom Tours was born from a deep love for Uganda and a desire to share its 
-              incredible natural beauty, diverse wildlife, and rich cultural heritage with travelers 
-              from around the world. What started as a small operation with a handful of passionate 
-              guides has grown into a premier tourism company serving thousands of visitors annually.
+              Ami Shalom Tours was born from a deep love for Rwanda and a desire to share its
+              incredible scenic beauty, majestic wildlife, and rich cultural heritage with travelers
+              from around the world. What started as a small operation with a handful of passionate
+              guides has grown into a premier tourism company serving visitors with authentic Rwandan hospitality.
             </p>
             <p>
-              Our journey began in 2014 when our founders recognized the need for authentic, 
-              responsible tourism that benefits both visitors and local communities. We set out 
-              to create experiences that go beyond typical tours—immersive journeys that educate, 
-              inspire, and create lasting connections.
+              Our journey began in 2016 when our founders recognized the need for responsible
+              tourism that honors Rwanda's journey of transformation and conservation. We set out
+              to create experiences that go beyond typical tours—immersive journeys that inspire,
+              educate, and create lasting connections with heart of Africa.
             </p>
             <p>
-              Over the years, we&apos;ve built strong relationships with local communities, conservation 
-              organizations, and hospitality partners. This network allows us to offer exclusive 
-              access to some of Uganda&apos;s most spectacular destinations while ensuring our operations 
-              support sustainable development and wildlife conservation.
+              Over the years, we&apos;ve built strong relationships with local communities,
+              the Rwanda Development Board, and conservation partners. This network allows us to offer
+              exclusive access to Rwanda&apos;s most spectacular destinations while ensuring our
+              operations support the protection of our natural heritage and the Big Five.
             </p>
             <p>
-              Today, we&apos;re proud to be a trusted name in East African tourism, known for our 
-              expertise, reliability, and commitment to creating extraordinary travel experiences. 
-              Our story continues to unfold with every journey we facilitate, every smile we create, 
-              and every memory we help preserve.
+              Today, we&apos;re proud to be a trusted name in Rwandan tourism, known for our
+              expertise, peace-centered service, and commitment to creating extraordinary travel
+              experiences. Our story continues with every traveler we welcome to our beautiful hills.
             </p>
           </motion.div>
 
@@ -123,15 +122,13 @@ export function OurStory() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`flex flex-col lg:flex-row items-center gap-8 ${
-                    isEven ? "lg:flex-row-reverse" : ""
-                  }`}
+                  className={`flex flex-col lg:flex-row items-center gap-8 ${isEven ? "lg:flex-row-reverse" : ""
+                    }`}
                 >
                   <div className={`flex-1 ${isEven ? "lg:text-right" : ""}`}>
                     <div
-                      className={`inline-block p-6 bg-white rounded-2xl shadow-lg border-2 border-yellow-500 ${
-                        isEven ? "lg:ml-auto" : ""
-                      }`}
+                      className={`inline-block p-6 bg-white rounded-2xl shadow-lg border-2 border-yellow-500 ${isEven ? "lg:ml-auto" : ""
+                        }`}
                       style={{ maxWidth: "500px" }}
                     >
                       <div className="flex items-center gap-4 mb-3">

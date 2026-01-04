@@ -4,7 +4,7 @@ import { ServicesHero, ServicesGrid } from "@/components/services";
 
 export const metadata = {
   title: "Our Services",
-  description: "Discover comprehensive travel services from Ami Shalom Tours including tour packages, travel planning, hotel booking, transportation, and more for your perfect Uganda adventure.",
+  description: "Discover comprehensive travel services from Ami Shalom Tours including tour packages, travel planning, hotel booking, transportation, and more for your perfect Rwandan adventure.",
 };
 
 export default function ServicesPage() {

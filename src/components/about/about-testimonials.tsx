@@ -6,19 +6,19 @@ import { Star, Quote } from "lucide-react";
 export function AboutTestimonials() {
   const testimonials = [
     {
-      text: "Ami Shalom Tours exceeded all our expectations! The gorilla trekking experience was life-changing, and our guide's knowledge of the local wildlife and culture was incredible. We felt safe, well-cared-for, and truly immersed in Uganda's beauty.",
+      text: "Ami Shalom Tours exceeded all our expectations! The gorilla trekking experience was life-changing, and our guide's knowledge of the local wildlife and culture was incredible. We felt safe, well-cared-for, and truly immersed in Rwanda's beauty.",
       author: "Sarah & Michael Johnson",
       location: "United States",
       rating: 5,
     },
     {
-      text: "From the moment we arrived, everything was perfectly organized. The team's attention to detail and genuine care for both travelers and local communities was evident. This wasn't just a vacation—it was a meaningful journey.",
+      text: "From the moment we arrived in Kigali, everything was perfectly organized. The team's attention to detail and genuine care for both travelers and local communities was evident. This wasn't just a vacation—it was a meaningful journey.",
       author: "Emma Thompson",
       location: "United Kingdom",
       rating: 5,
     },
     {
-      text: "Our family trip to Uganda with Ami Shalom Tours was absolutely magical. The guides were patient with our children, the accommodations were excellent, and we created memories that will last a lifetime. Highly recommend!",
+      text: "Our family trip to Rwanda with Ami Shalom Tours was absolutely magical. The guides were patient with our children, the lakeside accommodations were excellent, and we created memories that will last a lifetime. Highly recommend!",
       author: "The Rodriguez Family",
       location: "Spain",
       rating: 5,

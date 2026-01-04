@@ -91,9 +91,9 @@ export function AboutSection() {
             <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               Ami Shalom Company LTD Is A Premier Tourism Operator
               Specializing In Curated, Immersive Travel Experiences Across
-              Uganda. From Tracking The Majestic Mountain Gorillas Of Bwindi, To
-              Gliding Across Serene Lakes On Boat Cruises, To Standing In Awe
-              Beneath Thundering Waterfalls, We Deliver Journeys That Go Beyond
+              The Land of a Thousand Hills, Rwanda. From Tracking The Majestic Mountain Gorillas Of Volcanoes National Park, To
+              Gliding Across Serene Lake Kivu On Boat Cruises, To Standing In Awe
+              Of The Big Five In Akagera, We Deliver Journeys That Go Beyond
               Sightseeing — Offering Moments That Inspire, Educate, And Connect.
             </p>
 

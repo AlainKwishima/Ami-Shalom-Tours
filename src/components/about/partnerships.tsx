@@ -23,7 +23,7 @@ export function Partnerships() {
     {
       icon: Award,
       title: "Hospitality Partners",
-      description: "We maintain strong relationships with hotels, lodges, and resorts across Uganda, ensuring our guests enjoy comfortable accommodations that meet our quality standards.",
+      description: "We maintain strong relationships with hotels, lodges, and eco-resorts across Rwanda, ensuring our guests enjoy comfortable accommodations that meet our high standards of excellence and sustainability.",
     },
   ];
 
@@ -50,8 +50,8 @@ export function Partnerships() {
             OUR PARTNERSHIPS
           </h2>
           <p className="text-gray-700 text-lg mt-4 max-w-3xl mx-auto">
-            We believe in the power of collaboration. Our partnerships with conservation groups, 
-            local communities, and tourism organizations enable us to deliver exceptional experiences 
+            We believe in the power of collaboration. Our partnerships with conservation groups,
+            local communities, and tourism organizations enable us to deliver exceptional experiences
             while making a positive impact.
           </p>
         </motion.div>

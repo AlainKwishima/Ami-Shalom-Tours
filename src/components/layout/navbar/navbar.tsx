@@ -48,7 +48,7 @@ export function Navbar() {
 
             {/* Social Media Icons */}
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/amishalomtours"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/20 hover:bg-yellow-500 p-2 rounded-full transition-all duration-300 hover:scale-110"
@@ -57,7 +57,7 @@ export function Navbar() {
               <Instagram className="h-5 w-5 text-white" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/amishalomtours"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/20 hover:bg-yellow-500 p-2 rounded-full transition-all duration-300 hover:scale-110"

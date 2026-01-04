@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { 
-  MapPin, 
-  Plane, 
-  Hotel, 
-  Car, 
-  Camera, 
-  UtensilsCrossed, 
+import {
+  MapPin,
+  Plane,
+  Hotel,
+  Car,
+  Camera,
+  UtensilsCrossed,
   Calendar,
   Users,
   Shield,
@@ -31,13 +31,13 @@ const services: Service[] = [
     id: 1,
     icon: MapPin,
     title: "Tour Packages",
-    description: "Comprehensive tour packages covering Uganda's most spectacular destinations. From gorilla trekking to wildlife safaris, we design complete itineraries that showcase the best of East Africa.",
+    description: "Comprehensive tour packages covering Rwanda's most spectacular destinations. From gorilla trekking in the Virungas to savanna safaris, we design itineraries that showcase the heart of Africa.",
     features: [
-      "Gorilla trekking experiences",
-      "Wildlife safari tours",
-      "Cultural immersion programs",
-      "Adventure activities",
-      "Multi-day packages",
+      "Gorilla trekking (Volcanoes NP)",
+      "Big Five safaris (Akagera)",
+      "Cultural & Heritage tours",
+      "Kigali city exploration",
+      "Custom multi-day packages",
     ],
     image: "/assets/city1.jpg",
   },
@@ -59,13 +59,13 @@ const services: Service[] = [
     id: 3,
     icon: Hotel,
     title: "Hotel & Accommodation Booking",
-    description: "We partner with the finest hotels, lodges, and resorts across Uganda. From luxury safari lodges to budget-friendly options, we secure accommodations that match your preferences and budget.",
+    description: "We partner with the finest hotels, lodges, and eco-resorts across Rwanda. From luxurious lakeside villas at Lake Kivu to high-end lodges near the gorillas, we secure the perfect stay.",
     features: [
-      "Luxury safari lodges",
-      "Boutique hotels",
-      "Budget accommodations",
-      "Eco-friendly options",
-      "Location-based recommendations",
+      "Luxury forest lodges",
+      "Lakeside boutique hotels",
+      "Kigali urban stays",
+      "Eco-friendly forest camps",
+      "Location-based expertise",
     ],
     image: "/assets/re7.jpg",
   },
@@ -101,13 +101,13 @@ const services: Service[] = [
     id: 6,
     icon: UtensilsCrossed,
     title: "Culinary Experiences",
-    description: "Discover Uganda's rich culinary heritage through authentic food experiences. From traditional cooking classes to local market tours and restaurant recommendations.",
+    description: "Discover Rwanda's rich culinary heritage through authentic food experiences. From traditional coffee and tea plantation tours to refined Rwandan dining and local market exploration.",
     features: [
-      "Cooking classes",
-      "Market tours",
-      "Restaurant recommendations",
-      "Traditional meals",
-      "Food and culture tours",
+      "Coffee & Tea plantation tours",
+      "Kigali food walks",
+      "Traditional Rwandan dinners",
+      "Market-to-table experiences",
+      "Cultural cooking session",
     ],
     image: "/assets/city4.jpg",
   },
@@ -194,7 +194,7 @@ export function ServicesGrid() {
             COMPREHENSIVE TRAVEL SERVICES
           </h2>
           <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            From planning to execution, we provide end-to-end travel solutions designed to 
+            From planning to execution, we provide end-to-end travel solutions designed to
             make your journey seamless, memorable, and extraordinary.
           </p>
         </motion.div>
@@ -240,14 +240,14 @@ export function ServicesGrid() {
                       </div>
                     </div>
                   )}
-                  
+
                   <h3
                     className="text-2xl font-bold text-gray-900 mb-3"
                     style={{ fontFamily: "Palanquin Dark, sans-serif" }}
                   >
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     {service.description}
                   </p>
@@ -295,7 +295,7 @@ export function ServicesGrid() {
             Ready to Plan Your Adventure?
           </h3>
           <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-            Contact our travel experts to create a customized itinerary that perfectly matches 
+            Contact our travel experts to create a customized itinerary that perfectly matches
             your interests, budget, and travel style.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

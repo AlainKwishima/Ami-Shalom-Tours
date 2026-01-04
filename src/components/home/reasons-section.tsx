@@ -19,85 +19,85 @@ interface ReasonData {
 const reasonsData: ReasonData[] = [
   {
     id: 1,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+    text: "Rwanda is world-renowned as the premier destination for tracking the majestic Mountain Gorillas in their natural habitat within the Volcanoes National Park. This life-changing encounter offers a unique glimpse into the lives of these gentle giants while supporting vital conservation efforts.",
     position: "left",
     images: [
       {
         src: "/assets/re1.jpg",
-        alt: "Ami Shalom landscape 1",
+        alt: "Mountain Gorilla in Volcanoes NP",
         size: "lg" as const,
       },
       {
         src: "/assets/re2.jpg",
-        alt: "Ami Shalom landscape 2",
+        alt: "Lush Rwandan rainforest",
         size: "md" as const,
       },
     ],
   },
   {
     id: 2,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.",
+    text: "Known as the 'Singapore of Africa,' Kigali is celebrated as the cleanest and safest city on the continent. Beyond its spotless streets, you'll find a vibrant cultural hub filled with world-class art galleries, busy markets, and a deeply moving history of resilience.",
     position: "right",
     images: [
       {
         src: "/assets/re3.jpg",
-        alt: "Ami Shalom landscape 3",
+        alt: "Clean streets of Kigali",
         size: "lg" as const,
       },
       {
         src: "/assets/re4.jpg",
-        alt: "Ami Shalom landscape 4",
+        alt: "Modern architecture in Rwanda",
         size: "md" as const,
       },
     ],
   },
   {
     id: 3,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+    text: "Akagera National Park offers a complete Big Five safari experience. From the vast savanna plains to the serene Lake Ihema, witness lions, rhinos, elephants, buffalos, and leopards in a landscape where hills meet the horizon.",
     position: "left",
     images: [
       {
         src: "/assets/re5.jpg",
-        alt: "Ami Shalom landscape 5",
+        alt: "Safari in Akagera NP",
         size: "sm" as const,
       },
       {
         src: "/assets/re6.jpg",
-        alt: "Ami Shalom landscape 6",
+        alt: "Elephants in the savanna",
         size: "sm" as const,
       },
     ],
   },
   {
     id: 4,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+    text: "Step into one of Africa's oldest rainforests. Nyungwe National Park is a biodiversity hotspot, home to 13 primate species including chimpanzees and Colobus monkeys, and features the breathtaking 70-meter high Canopy Walkway.",
     position: "right",
     images: [
       {
         src: "/assets/re7.jpg",
-        alt: "Ami Shalom landscape 7",
+        alt: "Nyungwe Canopy Walk",
         size: "md" as const,
       },
       {
         src: "/assets/re8.jpg",
-        alt: "Ami Shalom landscape 8",
+        alt: "Colobus Monkey in Nyungwe",
         size: "md" as const,
       },
     ],
   },
   {
     id: 5,
-    text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
+    text: "Experience the heart of Rwanda through its people. From the rhythmic Intore dancers to the traditional Imigongo art, Rwandan culture is a beautiful tapestry of hospitality, storytelling, and craftsmanship that welcomes every traveler as a friend.",
     position: "left",
     images: [
       {
         src: "/assets/re9.jpg",
-        alt: "Ami Shalom landscape 9",
+        alt: "Traditional Intore dancers",
         size: "sm" as const,
       },
       {
         src: "/assets/re10.jpg",
-        alt: "Ami Shalom landscape 10",
+        alt: "Rwandan hospitality",
         size: "sm" as const,
       },
     ],
@@ -167,8 +167,8 @@ export function ReasonsSection() {
           {/* Timeline Items */}
           <div className="space-y-16 lg:space-y-20">
             {reasonsData.map((reason, index) => (
-              <motion.div 
-                key={reason.id} 
+              <motion.div
+                key={reason.id}
                 className="relative"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

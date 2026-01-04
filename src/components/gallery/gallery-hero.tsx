@@ -29,7 +29,7 @@ export function GalleryHero() {
             className="text-base md:text-xl lg:text-2xl text-white opacity-90"
             style={{ fontFamily: "Palanquin Dark, sans-serif" }}
           >
-            Memories From Our Amazing Tours Around The World
+            Memories From Our Unforgettable Tours Across The Land of a Thousand Hills
           </p>
         </div>
       </div>
