@@ -12,7 +12,7 @@ export class ContentBootstrapService implements OnModuleInit {
     private readonly destinations: DestinationsService,
     private readonly reviews: ReviewsService,
     private readonly pages: PagesService,
-  ) {}
+  ) { }
 
   async onModuleInit() {
     try {
@@ -25,11 +25,17 @@ export class ContentBootstrapService implements OnModuleInit {
             slug: d.slug,
             location: d.location,
             description: d.description,
+            fullDescription: (d as any).fullDescription,
             price: d.price,
             duration: d.duration,
+            rating: d.rating,
             images: d.images,
+            gallery: (d as any).gallery,
             highlights: d.highlights,
-            events: d.events,
+            included: (d as any).included,
+            bestTime: (d as any).bestTime,
+            groupSize: (d as any).groupSize,
+            events: (d as any).events,
           });
         }
         this.logger.log(`Seeded ${MOCK_DESTINATIONS.length} destinations`);
