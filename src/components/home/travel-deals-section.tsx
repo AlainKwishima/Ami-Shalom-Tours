@@ -1,7 +1,11 @@
-import React from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { MapPin, Star, Clock, Users } from "lucide-react";
+import { API_BASE_URL } from "@/lib/constants";
+import type { Destination } from "@/lib/api/destinations";
 
 interface TravelDealCardProps {
+  id: string;
   location: string;
   title: string;
   duration: string;
@@ -14,6 +18,7 @@ interface TravelDealCardProps {
 }
 
 const TravelDealCard: React.FC<TravelDealCardProps> = ({
+  id,
   location,
   title,
   duration,
@@ -87,51 +92,36 @@ const TravelDealCard: React.FC<TravelDealCardProps> = ({
         </div>
 
         {/* More Information Button */}
-        <button className="w-full bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold py-2 px-4 transition-all duration-300">
-          More Information
-        </button>
+        <Link href={`/destinations/${id}`} className="block">
+          <button className="w-full bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold py-2 px-4 transition-all duration-300">
+            More Information
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 
-const travelDeals = [
-  {
-    location: "Musanze",
-    title: "Mountain Gorilla Expedition",
-    duration: "2N Musanze",
-    destinations: "Volcanoes NP",
-    rating: 5.0,
-    reviews: 12,
-    price: "$1650",
-    isPopular: true,
-    bgImage: "/assets/re1.jpg",
-  },
-  {
-    location: "Kayonza",
-    title: "Akagera Big Five Safari",
-    duration: "2N Akagera",
-    destinations: "Savanna Tours",
-    rating: 4.8,
-    reviews: 8,
-    price: "$450",
-    isPopular: true,
-    bgImage: "/assets/re4.jpg",
-  },
-  {
-    location: "Rubavu",
-    title: "Lake Kivu Lakeside Retreat",
-    duration: "3N Gisenyi",
-    destinations: "Island Hopping",
-    rating: 4.7,
-    reviews: 15,
-    price: "$320",
-    isPopular: false,
-    bgImage: "/assets/re7.jpg",
-  },
-];
-
 export function TravelDealsSection() {
+  const [deals, setDeals] = useState<Destination[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API_BASE_URL}/destinations?limit=3`)
+      .then((res) => res.json())
+      .then((data) => {
+        setDeals(data.data || []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch deals:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) return null;
+  if (deals.length === 0) return null;
+
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 min-h-screen">
       {/* Hero Background - Only covers part of the section */}
@@ -171,18 +161,19 @@ export function TravelDealsSection() {
 
         {/* Travel Deal Cards */}
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12">
-          {travelDeals.map((deal, index) => (
+          {deals.map((deal) => (
             <TravelDealCard
-              key={index}
+              key={deal._id}
+              id={deal._id}
               location={deal.location}
               title={deal.title}
-              duration={deal.duration}
-              destinations={deal.destinations}
-              rating={deal.rating}
-              reviews={deal.reviews}
-              price={deal.price}
-              isPopular={deal.isPopular}
-              bgImage={deal.bgImage}
+              duration={deal.duration || "Contact us"}
+              destinations={deal.location.split(',')[0]}
+              rating={deal.rating || 5}
+              reviews={0}
+              price={deal.price || "TBD"}
+              isPopular={true}
+              bgImage={deal.images?.[0] || "/assets/re1.jpg"}
             />
           ))}
         </div>
