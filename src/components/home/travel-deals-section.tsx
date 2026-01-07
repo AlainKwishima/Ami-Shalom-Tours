@@ -77,11 +77,10 @@ const TravelDealCard: React.FC<TravelDealCardProps> = ({
             <Star
               key={i}
               size={16}
-              className={`${
-                i < Math.floor(rating)
+              className={`${i < Math.floor(rating)
                   ? "text-yellow-500 fill-current"
                   : "text-gray-400"
-              } mr-1`}
+                } mr-1`}
             />
           ))}
           <span className="text-white text-sm ml-2">{rating}/5</span>
@@ -98,37 +97,37 @@ const TravelDealCard: React.FC<TravelDealCardProps> = ({
 
 const travelDeals = [
   {
-    location: "Thailand",
-    title: "Best Of Pattaya & Bangkok Getaway",
-    duration: "3N Pattaya",
-    destinations: "2N Bangkok",
-    rating: 4.5,
-    reviews: 5,
-    price: "$177",
+    location: "Musanze",
+    title: "Mountain Gorilla Expedition",
+    duration: "2N Musanze",
+    destinations: "Volcanoes NP",
+    rating: 5.0,
+    reviews: 12,
+    price: "$1650",
     isPopular: true,
-    bgImage: "/assets/city1.jpg",
+    bgImage: "/assets/re1.jpg",
   },
   {
-    location: "Malaysia",
-    title: "Most Wanted Kuala Lumpur Package",
-    duration: "4N Singapore",
-    destinations: "2N KualaLumpur",
+    location: "Kayonza",
+    title: "Akagera Big Five Safari",
+    duration: "2N Akagera",
+    destinations: "Savanna Tours",
+    rating: 4.8,
+    reviews: 8,
+    price: "$450",
+    isPopular: true,
+    bgImage: "/assets/re4.jpg",
+  },
+  {
+    location: "Rubavu",
+    title: "Lake Kivu Lakeside Retreat",
+    duration: "3N Gisenyi",
+    destinations: "Island Hopping",
     rating: 4.7,
-    reviews: 5,
-    price: "$177",
+    reviews: 15,
+    price: "$320",
     isPopular: false,
-    bgImage: "/assets/cit2.jpg",
-  },
-  {
-    location: "Dubai",
-    title: "Hero Package - Dubai Grand Getaway",
-    duration: "4N Dubai",
-    destinations: "1N Abu Dhabi",
-    rating: 4.5,
-    reviews: 5,
-    price: "$177",
-    isPopular: true,
-    bgImage: "/assets/cit3.jpg",
+    bgImage: "/assets/re7.jpg",
   },
 ];
 

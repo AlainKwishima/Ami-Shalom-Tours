@@ -1,11 +1,11 @@
 import DestinationCard from "./DestinationCard";
 
 const destinations = [
-  { image: "/assets/cit1.jpg", title: "Delhi" },
-  { image: "/assets/city2.jpg", title: "Goa" },
-  { image: "/assets/city3.jpg", title: "Manali" },
-  { image: "/assets/city4.jpg", title: "Amritsar" },
-  { image: "/assets/city5.jpg", title: "Shimla" },
+  { image: "/assets/re1.jpg", title: "Volcanoes NP" },
+  { image: "/assets/re4.jpg", title: "Akagera NP" },
+  { image: "/assets/about2.jpg", title: "Nyungwe Forest" },
+  { image: "/assets/re7.jpg", title: "Lake Kivu" },
+  { image: "/assets/city1.jpg", title: "Kigali City" },
 ];
 
 export function TopDestinationsSection() {
@@ -49,10 +49,10 @@ export function TopDestinationsSection() {
           <p className="text-white text-base md:text-lg mb-4">
             Speak To Our Destination Experts At Call{" "}
             <a
-              href="tel:+14589956389"
+              href="tel:+250780000000"
               className="text-yellow-500 font-bold hover:text-yellow-400 transition-colors duration-200"
             >
-              +(45) 899 566 389
+              +250 780 000 000
             </a>{" "}
             or{" "}
             <button className="text-yellow-500 font-bold hover:text-yellow-400 transition-colors duration-200 underline">
