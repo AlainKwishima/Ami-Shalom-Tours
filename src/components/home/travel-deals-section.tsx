@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { MapPin, Star, Clock, Users } from "lucide-react";
@@ -83,8 +85,8 @@ const TravelDealCard: React.FC<TravelDealCardProps> = ({
               key={i}
               size={16}
               className={`${i < Math.floor(rating)
-                  ? "text-yellow-500 fill-current"
-                  : "text-gray-400"
+                ? "text-yellow-500 fill-current"
+                : "text-gray-400"
                 } mr-1`}
             />
           ))}
