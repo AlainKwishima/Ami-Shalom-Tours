@@ -33,7 +33,7 @@ export function TopDestinationsSection() {
         </div>
 
         {/* Cards Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row lg:justify-center gap-8 mb-16 lg:items-end">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row lg:justify-center justify-items-center gap-8 mb-16 lg:items-end">
           {destinations.map((d, i) => (
             <DestinationCard
               key={i}
