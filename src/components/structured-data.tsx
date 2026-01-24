@@ -8,7 +8,7 @@ export function StructuredData() {
     description:
       "Expert guided tours in Ami Shalom, India. Discover breathtaking destinations with professional tour guides.",
     url: "https://AmiShalom.vercel.app",
-    logo: "https://AmiShalom.vercel.app/icon-512x512.png",
+    logo: "https://AmiShalom.vercel.app/assets/logo.png",
     image: "https://AmiShalom.vercel.app/og-image.jpg",
     // telephone: "+91-XXX-XXX-XXXX",
     // email: "info@Ami Shalomtravel.com",

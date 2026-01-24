@@ -16,7 +16,7 @@ export function DestinationGallery({ destination }: DestinationGalleryProps) {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <h2
-          className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center"
+          className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center"
           style={{ fontFamily: "Palanquin Dark, sans-serif" }}
         >
           Photo Gallery

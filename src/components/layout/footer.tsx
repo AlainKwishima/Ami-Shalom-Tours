@@ -8,8 +8,10 @@ const footerLinks = [
   { name: "About Us", href: "#" },
   { name: "Destination", href: "#" },
   { name: "Exclusive Tour", href: "#" },
-  { name: "Reviews", href: "#" },
-  { name: "FAQS", href: "#" },
+  { name: "Reviews", href: "/reviews" },
+  { name: "FAQS", href: "/faqs" },
+  { name: "Blog", href: "/blog" },
+  { name: "Meet the CEO", href: "/ceo" },
 ];
 
 export function Footer() {

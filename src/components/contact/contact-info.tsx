@@ -11,7 +11,7 @@ export function ContactInfo() {
         >
           Contact Information
         </h3>
-        
+
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
             <div className="bg-yellow-500 p-3 rounded-full">
@@ -76,16 +76,16 @@ export function ContactInfo() {
         >
           Quick Actions
         </h3>
-        
+
         <div className="space-y-4">
           <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 rounded-lg transition-colors duration-200">
             Book a Consultation
           </button>
-          
+
           <button className="w-full border border-yellow-500 text-yellow-600 hover:bg-yellow-50 font-semibold py-3 rounded-lg transition-colors duration-200">
-            Request a Quote
+            Request a Consultation
           </button>
-          
+
           <button className="w-full border border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-3 rounded-lg transition-colors duration-200">
             Download Brochure
           </button>

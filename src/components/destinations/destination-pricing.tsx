@@ -23,7 +23,7 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
             transition={{ duration: 0.6 }}
           >
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-8"
+              className="text-2xl md:text-3xl font-bold text-white mb-6"
               style={{ fontFamily: "Palanquin Dark, sans-serif" }}
             >
               What&apos;s Included
@@ -46,7 +46,7 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
             transition={{ duration: 0.6 }}
           >
             <h2
-              className="text-3xl md:text-4xl font-bold text-white mb-8"
+              className="text-2xl md:text-3xl font-bold text-white mb-6"
               style={{ fontFamily: "Palanquin Dark, sans-serif" }}
             >
               What&apos;s Not Included
@@ -72,10 +72,10 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
         >
           <div className="bg-white rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
             <h3
-              className="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+              className="text-xl md:text-2xl font-bold text-gray-900 mb-4"
               style={{ fontFamily: "Palanquin Dark, sans-serif" }}
             >
-              Ready to Book?
+              Ready to Connect?
             </h3>
             <p className="text-gray-700 mb-6">
               Start your adventure today! Contact us to reserve your spot or customize this tour.
@@ -94,7 +94,7 @@ export function DestinationPricing({ destination }: DestinationPricingProps) {
                 size="lg"
                 className="border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold px-8 py-6 text-lg rounded-lg"
               >
-                <Link href="/contact">Request Quote</Link>
+                <Link href="/contact">Request a Consultation</Link>
               </Button>
             </div>
           </div>

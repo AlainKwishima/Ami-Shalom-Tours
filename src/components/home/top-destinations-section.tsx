@@ -56,7 +56,7 @@ export function TopDestinationsSection() {
             </a>{" "}
             or{" "}
             <button className="text-yellow-500 font-bold hover:text-yellow-400 transition-colors duration-200 underline">
-              REQUEST A QUOTE
+              REQUEST A CONSULTATION
             </button>
           </p>
         </div>

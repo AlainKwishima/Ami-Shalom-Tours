@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/", label: "Home", isExternal: false },
@@ -26,6 +27,8 @@ const smoothScrollTo = (elementId: string) => {
 };
 
 export function NavLinks({ className = "", onItemClick }: NavLinksProps) {
+  const pathname = usePathname();
+
   const handleClick = (href: string, e: React.MouseEvent) => {
     if (href.startsWith("#")) {
       e.preventDefault();
@@ -33,10 +36,13 @@ export function NavLinks({ className = "", onItemClick }: NavLinksProps) {
       smoothScrollTo(elementId);
       onItemClick?.();
     } else if (href === "/") {
-      // For home, scroll to top
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      onItemClick?.();
+      // For home, scroll to top ONLY if currently on home page
+      if (pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        onItemClick?.();
+      }
+      // Otherwise let standard navigation happen
     } else {
       // For route navigations, let Next.js handle navigation and close menu
       onItemClick?.();

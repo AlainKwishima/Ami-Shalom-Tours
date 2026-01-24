@@ -71,10 +71,10 @@ export function BookTourForm() {
           throw new Error(data?.message || "Unable to submit booking. Please try again.");
         }
 
-        setSuccess(
-          "Thank you! Your booking request has been sent. Our team will contact you shortly to confirm the details.",
-        );
-        reset();
+        // setSuccess(
+        //   "Thank you! Your booking request has been sent. Our team will contact you shortly to confirm the details.",
+        // );
+        window.location.href = "/booking-success";
       } catch (err) {
         setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
       }
